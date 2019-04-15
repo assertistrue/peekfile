@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}\\index.js"
+        },
+        {
+            "name": "Launch for Test file (./tests/onerandombigfile.txt)",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "node",
+            "runtimeArgs": [
+                "--inspect=39219", "--debug-brk", "./index.js", "-i", "./tests/onerandombigfile.txt", "-l", "1", "-c", "1009441", "-f", "100"
+            ],
+            "port": 39219
+        }      
+    ]
+}
