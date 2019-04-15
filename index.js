@@ -3,8 +3,8 @@ var readline = require('readline');
 var cntr = 0;
 
 const ArgumentParser  = require('argparse').ArgumentParser;
-var argsParser = new ArgumentParser({ addHelp:true, description:"URL content continuous reload at time intervals" , debug: true });
-argsParser.addArgument(["--InputFile", "-i"], { help:"input file", required:false, defaultValue:"stdin" })
+var argsParser = new ArgumentParser({ addHelp:true, description:"Small NodeJS script to peek into text file contents at specified line and column numbers" , debug: true });
+argsParser.addArgument(["--InputFile", "-i"], { help:"input file to be peeked. If omitted, stdin stream will be used", required:false, defaultValue:"stdin" })
 argsParser.addArgument(["--Line", "-l"], { type:"int", help:"line number counting from 1", required:false, defaultValue:0 })
 argsParser.addArgument(["--Column", "-c"], { type:"int", help:"column number counting from 1", required:false, defaultValue:0 })
 argsParser.addArgument(["--PeekForward", "-f"], { type:"int", help:"no of characters to peek into starting from specified column", required:false, defaultValue:20 })
